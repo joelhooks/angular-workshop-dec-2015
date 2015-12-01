@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Training</title>
+  <script src="../vendor/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap-css/css/bootstrap.css">
+</head>
+<body ng-controller="AppCtrl as app">
+
+<person-card person="app.person" do-stuff="app.sayHello(name)"></person-card>
+<hr>
+<person-card ng-repeat="person in app.people" person="person" do-stuff="app.sayGoodbye(name)"></person-card>
+<hr>
+<title-component text="This is some text."></title-component>
+<title-component text="This is some other text."></title-component>
+<title-component text="This is actually rad."></title-component>
+<title-component text="{{app.myTitle}}"></title-component>
+
+
+
+</body>
+</html>

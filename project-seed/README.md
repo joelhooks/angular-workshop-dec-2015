@@ -2,6 +2,7 @@
 
 Cool Links!
 
+* https://facebook.github.io/react/docs/thinking-in-react.html
 * http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html
 * http://googletesting.blogspot.com/2010/07/code-coverage-goal-80-and-no-less.html
 * https://egghead.io/articles/angularjs-core-services-directive-definition-object-and-ui-router-cheat-sheets
