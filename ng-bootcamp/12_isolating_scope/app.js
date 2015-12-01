@@ -10,6 +10,16 @@ angular.module('app', [])
     }; // directive definition object (DDO)
   })
 
+  .directive('personList', function() {
+    return {
+      restrict: 'E',
+      scope: {
+        people: '='
+      },
+      template: '<person-card ng-repeat="person in app.people" person="person"></person-card>'
+    }
+  })
+
   .directive('personCard', function() {
     return {
       restrict: 'E',

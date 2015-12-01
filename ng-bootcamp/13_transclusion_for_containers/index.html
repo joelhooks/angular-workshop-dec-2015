@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Training</title>
+  <script src="../vendor/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap-css/css/bootstrap.css">
+</head>
+<body ng-controller="AppCtrl as app">
+
+<my-wrapper>
+  <h1>Some content of my choosing.</h1>
+</my-wrapper>
+<my-wrapper>
+  <h1>{{app.message}}</h1>
+</my-wrapper>
+
+</body>
+</html>

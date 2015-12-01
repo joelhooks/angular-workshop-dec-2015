@@ -11,13 +11,12 @@
 
 <person-card person="app.person" do-stuff="app.sayHello(name)"></person-card>
 <hr>
-<person-card ng-repeat="person in app.people" person="person" do-stuff="app.sayGoodbye(name)"></person-card>
+<person-list people="app.people"></person-list>
 <hr>
 <title-component text="This is some text."></title-component>
 <title-component text="This is some other text."></title-component>
 <title-component text="This is actually rad."></title-component>
 <title-component text="{{app.myTitle}}"></title-component>
-
 
 
 </body>
