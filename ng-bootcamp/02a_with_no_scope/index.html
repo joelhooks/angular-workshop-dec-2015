@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Training</title>
+  <script src="../vendor/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="AppCtrl as app">
+<input type="text" ng-model="app.message" />
+<h1>{{ app.message }}</h1>
+{{app.otherMessage}}
+{{app.messageObject.text}}
+</body>
+</html>
