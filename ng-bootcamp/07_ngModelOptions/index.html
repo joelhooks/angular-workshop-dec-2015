@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Training</title>
+  <script src="../vendor/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap-css/css/bootstrap.css">
+</head>
+<body ng-controller="AppCtrl as app">
+<input type="text" ng-model="app.searchTerm.firstName" ng-model-options="app.firstNameInputOptions">
+<input type="text" ng-model="app.searchTerm.lastName" ng-model-options="{updateOn: 'mouseover'}">
+<input type="text" ng-model="app.searchTerm.email">
+<table class="table">
+  <thead>
+    <tr>
+      <th ng-click="app.setSort('firstName')">First Name</th>
+      <th ng-click="app.setSort('lastName')">Last Name</th>
+      <th ng-click="app.setSort('email')">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="person in app.people|filter:app.searchTerm|orderBy:app.sortBy">
+      <td>{{person.firstName}}</td>
+      <td>{{person.lastName}}</td>
+      <td>{{person.email}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
