@@ -9,12 +9,11 @@ angular.module('ps.user-list', [
         controller: 'UserListCtrl as userList'
       })
   })
-  .controller('UserListCtrl', function UserListCtrl($http) {
+  .controller('UserListCtrl', function UserListCtrl(userModel) {
     var userList = this;
 
-    $http.get('/api/users').then(function (results) {
-      userList.users = results.data;
+    userModel.getUsers().then(function(users) {
+      userList.users = users;
     })
-
   })
 ;
