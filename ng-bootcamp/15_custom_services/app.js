@@ -15,6 +15,10 @@ angular.module('app', [])
     app.people = peopleService.getPeople();
   })
 
+  .factory('peopleFactory', function() {
+    return {}; //can return ANYTHING
+  })
+
   .service('peopleService', function PeopleService() {
     var peopleService = this;
 
