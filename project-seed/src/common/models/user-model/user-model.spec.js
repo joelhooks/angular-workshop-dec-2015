@@ -3,7 +3,10 @@ describe('UserModel', function() {
     $httpBackend,
     allUsers;
 
-  beforeEach(module('ps.models.user-model'));
+  beforeEach(module('ps.models.user-model', {
+    baseApiUrl: '/api'
+  }));
+
   beforeEach(inject(function(_userModel_, _$httpBackend_) {
     userModel = _userModel_;
     $httpBackend = _$httpBackend_;
