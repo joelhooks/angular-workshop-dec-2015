@@ -10,11 +10,11 @@ angular.module('ps.user-detail', [
       })
   })
 
-  .controller('UserDetailCtrl', function UserDetailCtrl($stateParams, $http) {
+  .controller('UserDetailCtrl', function UserDetailCtrl($stateParams, userModel) {
     var userDetail = this;
-    console.log($stateParams)
-    $http.get('/api/users/' + $stateParams.username).then(function(result) {
-      userDetail.user = result.data;
+
+    userModel.getUser($stateParams.username).then(function(user) {
+      userDetail.user = user;
     })
   })
 ;
